@@ -33,6 +33,16 @@ int main()
 				std::cout << input[i] << " + " << input[j] << " = 2020" << std::endl;
 				std::cout << input[i] << " * " << input[j] << " = " << result << std::endl;
 			}
+
+			for (int k = j + 1; k < input.size(); ++k)
+			{
+				if (input[i] + input[j] + input[k] == 2020)
+				{
+					int result = input[i] * input[j] * input[k];
+					std::cout << input[i] << " + " << input[j] << " + " << input[k] << " = 2020" << std::endl;
+					std::cout << input[i] << " * " << input[j] << " * " << input[k] << " = " << result << std::endl;
+				}
+			}
 		}
 	}
 
