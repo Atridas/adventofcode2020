@@ -20,9 +20,9 @@ int main()
 		}
 	}
 
-	for (int i = 0; i < input.size(); ++i)
+	for (int i = 0; i < (int)input.size(); ++i)
 	{
-		for (int j = i + 1; j < input.size(); ++j)
+		for (int j = i + 1; j < (int)input.size(); ++j)
 		{
 			if (input[i] + input[j] == 2020)
 			{
@@ -31,7 +31,7 @@ int main()
 				std::cout << input[i] << " * " << input[j] << " = " << result << std::endl;
 			}
 
-			for (int k = j + 1; k < input.size(); ++k)
+			for (int k = j + 1; k < (int)input.size(); ++k)
 			{
 				if (input[i] + input[j] + input[k] == 2020)
 				{
