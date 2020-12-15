@@ -87,7 +87,7 @@ BUS_FOUND:
 			std::cout << "\t\tvn % bus2 " << (v * n) % bus2 << std::endl;
 		}
 
-		solution += (bus - std::get<1>(element)) * (v * n);
+		solution += ((unsigned long long)bus - std::get<1>(element)) * (v * n);
 	}
 
 	solution %= N;

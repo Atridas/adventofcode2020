@@ -7,8 +7,8 @@ int main()
 {
 	struct Dataline
 	{
-		int min, max;
-		char letter;
+		int min = 0, max = 0;
+		char letter = 0;
 		std::string password;
 	};
 
@@ -69,8 +69,8 @@ int main()
 
 		// part 2
 		{
-			char position1Value = dataline.min <= dataline.password.length() ? dataline.password[dataline.min - 1] : '\0';
-			char position2Value = dataline.max <= dataline.password.length() ? dataline.password[dataline.max - 1] : '\0';
+			char position1Value = dataline.min <= (int)dataline.password.length() ? dataline.password[dataline.min - 1] : '\0';
+			char position2Value = dataline.max <= (int)dataline.password.length() ? dataline.password[dataline.max - 1] : '\0';
 
 			int count = 0;
 			if (position1Value == dataline.letter)

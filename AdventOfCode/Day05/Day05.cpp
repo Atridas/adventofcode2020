@@ -4,7 +4,6 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <string_view>
 #include <unordered_map>
 #include <vector>
 
@@ -75,7 +74,7 @@ int main()
 		}
 	);
 
-	for (int i = 0; i < input.size() - 1; ++i)
+	for (int i = 0; i < (int)input.size() - 1; ++i)
 	{
 		int seatID = std::get<0>(input[i]) * 8 + std::get<1>(input[i]);
 		int nextSeatID = std::get<0>(input[i + 1]) * 8 + std::get<1>(input[i + 1]);
