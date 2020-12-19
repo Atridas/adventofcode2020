@@ -1,0 +1,30 @@
+namespace aoc18;
+
+QUADRIGA_IGNORE = (' '|'\t'|'\n'|'\r')+;
+
+NUMBER = #+;
+
+PLUS = '+';
+MULT = '*';
+
+PARENTHESIS_OPEN = '(';
+PARENTHESIS_CLOSE = ')';
+
+
+
+// ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
+// ---------------------------------------------------------------------
+
+
+<Parenthesis> = '(' <Operation> ')';
+<Operation> = (<Parenthesis> | NUMBER) {('+' | '*') (<Parenthesis> | NUMBER)};
+<SimpleOperation> = <Operation> END;
+
+
+<AdvancedParenthesis> = NUMBER | ('(' <AdvancedMultiplication> ')');
+<AdvancedAddition> = <AdvancedParenthesis> {'+' <AdvancedParenthesis>};
+<AdvancedMultiplication> = <AdvancedAddition> {'*' <AdvancedAddition>};
+<AdvancedOperation> = <AdvancedMultiplication> END;
+
+
