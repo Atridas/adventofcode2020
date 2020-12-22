@@ -136,12 +136,12 @@ void copyMirror(char out[8 * imageSize][8 * imageSize], char in[8 * imageSize][8
 
 struct Tile
 {
-	int id;
-	char img[10][10];
+	int id = 0;
+	char img[10][10] = {};
 
 	OrientationValues original, inverted;
 
-	TilePermutation permutations[8];
+	TilePermutation permutations[8] = {};
 };
 
 enum class CopyOrientation
