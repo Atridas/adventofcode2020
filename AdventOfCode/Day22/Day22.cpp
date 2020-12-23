@@ -66,13 +66,13 @@ GameResult recursiveCombat(std::unordered_map<RoundHistory, GameResult>& resultH
 
 	RoundHistory thisGame = { player1, player2 };
 
-	{
+	/*{
 		auto it = resultHistory.find(thisGame);
 		if (it != resultHistory.end())
 		{
 			return it->second;
 		}
-	}
+	}*/
 
 
 	std::unordered_set<RoundHistory> roundHistory;
@@ -93,7 +93,7 @@ GameResult recursiveCombat(std::unordered_map<RoundHistory, GameResult>& resultH
 		if (roundHistory.find(thisRound) != roundHistory.end())
 		{
 			GameResult result = { 0, std::move(player1) };
-			resultHistory[thisGame] = result;
+			//resultHistory[thisGame] = result;
 			return result;
 		}
 		else
@@ -164,7 +164,7 @@ GameResult recursiveCombat(std::unordered_map<RoundHistory, GameResult>& resultH
 		}
 	}*/
 
-	resultHistory[thisGame] = result;
+	//resultHistory[thisGame] = result;
 
 	return std::move(result);
 }
